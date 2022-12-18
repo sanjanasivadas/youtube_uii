@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/youtubeuii/youtube_video.dart';
-import 'package:flutter_application_1/youtubeuii/utubeappbar.dart';
+import 'package:youtube_uii/youtube_appbar.dart';
+import 'package:youtube_uii/youtube_video.dart';
 
 void main() {
   runApp(MaterialApp(

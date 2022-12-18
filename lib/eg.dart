@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube_uii/youtube_dummy.dart';
 
-import 'youtubedummy.dart';
 
 class Videodetails extends StatelessWidget{
   const Videodetails({Key? key}) : super(key:key);
