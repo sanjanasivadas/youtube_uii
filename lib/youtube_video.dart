@@ -1,8 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:progress_indicator/progress_indicator.dart';
 
 class VideoWidget extends StatelessWidget{
   VideoWidget({super.key,required this.imagemain,required this.duration,required this.Avatarimg,required this.Title,required this.Views,required this.channelname,required this.uploadtime});
@@ -28,18 +25,21 @@ class VideoWidget extends StatelessWidget{
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.24,
 
-              child: Stack(children: [
+              child: Stack(
+                children: [
                 Container(
                   width: MediaQuery.of(context).size.width,
                   child: Image.network(imagemain,fit: BoxFit.cover,),
                 ),
+
                 Positioned(
                   right: 20,
-                  bottom: 20,
+                  bottom: 15,
                   child: Container(
                     width: 40,
                     height: 20,
                     decoration: BoxDecoration(
+                      color: Colors.black54,
                       borderRadius: BorderRadius.circular(2)
                     ),
                     child: Center(
@@ -67,11 +67,11 @@ class VideoWidget extends StatelessWidget{
                           child:Column(
                             children:  [
                               Padding(
-                                padding: EdgeInsets.only(left: 0, right: 90),
+                                padding: EdgeInsets.only(left: 0, right: 100),
                                 child: Text(Title,
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 14,
+                                  fontSize: 16,
                                    fontWeight: FontWeight.bold),
                                    ),
                                 ),
@@ -82,11 +82,11 @@ class VideoWidget extends StatelessWidget{
                                       Text(channelname,
                                       style: TextStyle(color:Colors.white70),
                                       ),
-                                      Text("."),
+                                      Text(" . "),
                                       Text(Views,
                                       style: TextStyle(color: Colors.white70),
                                       ),
-                                      Text("."),
+                                      Text(" .  "),
                                       Text(uploadtime,
                                       style: TextStyle(color: Colors.white70),
                                             )
@@ -99,11 +99,10 @@ class VideoWidget extends StatelessWidget{
                             ],
                           ),
                           Positioned(
-                            right: 20,
+                            right: 8,
                             top: 6,
                             child: IconButton(
                               onPressed: () {
-                                
                               },
                               icon: Icon(Icons.more_vert_outlined,
                               color: Colors.white,
